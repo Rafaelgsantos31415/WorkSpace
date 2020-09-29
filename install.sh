@@ -101,14 +101,11 @@ echo "------------------------"
 
 snap install code --classic
 
-
-#flatpak
-
 echo "------------------------"
 echo "installing Spotify..."
 echo "------------------------"
 
-flatpak install flathub com.spotify.Client
+snap install spotify
 
 #config
 
@@ -122,26 +119,22 @@ echo "------------------------"
 echo "installin Theme..."
 echo "------------------------"
 
-cd /usr/share/themes
+tar -zxvf Layan.tar.gz
 
-wget https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1OTcxMjM5NjUiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImJiM2Y5ZWQwMWE3MDNlODA5YzM0NjhjOTBlYzgzMjA3ZDZhMDRjNDU0OTk4NDkwYTBmMDIyNzMzMzc5YmY5ZjlmNzY5MDVhMDI2ZmM3NTEyNWUyMDA3ZjNhYzdkNzk4YTY5MTA1Y2EzOTY0YmQ1NjQ5NGE4NjhlOTQzYjZmYjg5IiwidCI6MTYwMTQwNzMwNiwic3RmcCI6ImJiNTYzMmE1ZTc3MGQ0MGFiYjNjMDRlM2NmZDlkYTI0Iiwic3RpcCI6IjE4Ni4yMTQuMTMyLjg5In0.53_iCfnVXJg5ufaCGPubo6vGIn2CtcNmLk9ciCJl4yg/Layan-dark-solid.tar.xz
+rm Layan.tar.gz
 
-tar -Jxxvf Layan-dark-solid.tar.xz
+mv Layan/ /usr/share/themes
 
-rm Layan-dark-solid.tar.xz
-
-gsettings set org.gnome.desktop.interface gtk-theme "Layan-dark-solid"
+gsettings set org.gnome.desktop.interface gtk-theme "Layan"
 
 echo "------------------------"
 echo "installing icon..."
 echo "------------------------"
 
-cd /usr/share/icons
+tar -zxvf Tela.tar.gz
 
-wget https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDEyNzI3MTIiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6Ijk0YTY5MDU0NGY5ZDhhZThiNjA2YWZlNzUzYzQwY2YzYWJjNjU5ZmM4ZGZmZmFjYjhmZDk0ZDZlOTJlMzZlMWRlNjUwNmQ2YWM2MGU5MzQyZWZlY2I5NjY3ZjEyNDBiNjZiMjdjM2FhNTY4NWZkOWJhM2Q1MmIxYzIzYTg5Y2E4IiwidCI6MTYwMTQwNzQ3Niwic3RmcCI6ImJiNTYzMmE1ZTc3MGQ0MGFiYjNjMDRlM2NmZDlkYTI0Iiwic3RpcCI6IjE4Ni4yMTQuMTMyLjg5In0.H3lrc_sAl5Nv3-KLvxwD50UfVVT4BQiJypO28JOnn-0/02-Tela-black.tar.xz
+rm Tela.tar.gz
 
-tar -Jxxvf 02-Tela-black.tar.xz
+mv Layan/ /usr/share/icons
 
-rm 02-Tela-black.tar.xz
-
-gsettings set org.gnome.desktop.interface icon-theme 'Tela-black'
+gsettings set org.gnome.desktop.interface icon-theme 'Tela'
