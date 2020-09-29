@@ -1,0 +1,8 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme"
+}
