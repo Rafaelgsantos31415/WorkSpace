@@ -182,31 +182,31 @@ echo "Rebooting..."
 echo "------------------------"
 
 echo "rebooting in 10"
-sleep 10
+sleep 1
 
 echo "rebooting in 9"
-sleep 9
+sleep 1
 
 echo "rebooting in 8"
-sleep 8
+sleep 1
 
 echo "rebooting in 7"
-sleep 7
+sleep 1
 
 echo "rebooting in 6"
-sleep 6
+sleep 1
 
 echo "rebooting in 5"
-sleep 5
+sleep 1
 
 echo "rebooting in 4"
-sleep 4
+sleep 1
 
 echo "rebooting in 3"
-sleep 3
+sleep 1
 
 echo "rebooting in 2"
-sleep 2
+sleep 1
 
 echo "rebooting in 1"
 sleep 1
