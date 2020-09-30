@@ -121,8 +121,7 @@ tar -zxvf Extensions.tar.gz
 
 rm Extensions.tar.gz
 
-cd /home/rafael
-
+cd /home/rafael/WorkSpace
 
 echo "------------------------"
 echo "config VSCode..."
