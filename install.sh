@@ -26,6 +26,11 @@ apt install ./google-chrome-stable_current_amd64.deb
 
 rm google-chrome-stable_current_amd64.deb
 
+echo "------------------------"
+echo "installing Vim..."
+echo "------------------------"
+
+apt install vim
 
 echo "------------------------"
 echo "installing Curl..."
@@ -110,6 +115,17 @@ snap install spotify
 #config
 
 echo "------------------------"
+echo "Creating vscode folders"
+echo "------------------------"
+
+code --user-data-dir
+
+sleep 5
+
+pkill code
+
+
+echo "------------------------"
 echo "Adding VSCode extensions..."
 echo "------------------------"
 
@@ -160,3 +176,41 @@ rm Tela.tar.gz
 mv Layan/ /usr/share/icons
 
 gsettings set org.gnome.desktop.interface icon-theme 'Tela'
+
+echo "------------------------"
+echo "Rebooting..."
+echo "------------------------"
+
+echo "rebooting in 10"
+sleep 10
+
+echo "rebooting in 9"
+sleep 9
+
+echo "rebooting in 8"
+sleep 8
+
+echo "rebooting in 7"
+sleep 7
+
+echo "rebooting in 6"
+sleep 6
+
+echo "rebooting in 5"
+sleep 5
+
+echo "rebooting in 4"
+sleep 4
+
+echo "rebooting in 3"
+sleep 3
+
+echo "rebooting in 2"
+sleep 2
+
+echo "rebooting in 1"
+sleep 1
+
+echo "goodbye"
+
+reboot
