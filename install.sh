@@ -110,6 +110,29 @@ snap install spotify
 #config
 
 echo "------------------------"
+echo "Adding VSCode extensions..."
+echo "------------------------"
+
+mv Extensions.tar.gz/ /home/rafael/.vscode/extensions/
+
+cd /home/rafael/.vscode/extensions/
+
+tar -zxvf Extensions.tar.gz
+
+rm Extensions.tar.gz
+
+cd /home/rafael
+
+
+echo "------------------------"
+echo "config VSCode..."
+echo "------------------------"
+
+mv keybindings.json /home/rafael/.config/Code/User/
+
+mv settings.json /home/rafael/.config/Code/User/
+
+echo "------------------------"
 echo "changing title buttons..."
 echo "------------------------"
 
