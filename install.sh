@@ -136,7 +136,7 @@ cd Code
 
 mkdir User
 
-cd /Home/rafael/WorkSpace
+cd /home/rafael/WorkSpace
 
 
 chmod -R 777 /home/rafael/.vscode
@@ -167,12 +167,6 @@ mv keybindings.json /home/rafael/.config/Code/User/
 mv settings.json /home/rafael/.config/Code/User/
 
 echo "------------------------"
-echo "changing title buttons..."
-echo "------------------------"
-
-gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
-
-echo "------------------------"
 echo "installin Theme..."
 echo "------------------------"
 
@@ -182,8 +176,6 @@ rm Layan.tar.gz
 
 mv Layan/ /usr/share/themes
 
-gsettings set org.gnome.desktop.interface gtk-theme "Layan"
-
 echo "------------------------"
 echo "installing icon..."
 echo "------------------------"
@@ -192,9 +184,7 @@ tar -zxvf Tela.tar.gz
 
 rm Tela.tar.gz
 
-mv Layan/ /usr/share/icons
-
-gsettings set org.gnome.desktop.interface icon-theme 'Tela'
+mv Tela/ /usr/share/icons
 
 echo "------------------------"
 echo "Rebooting..."
