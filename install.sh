@@ -118,11 +118,19 @@ echo "------------------------"
 echo "Creating vscode folders"
 echo "------------------------"
 
-code --user-data-dir
+mkdir .vscode
 
-sleep 5
+cd .vscode
 
-pkill code
+mkdir extensions
+
+cd ..
+
+cd .config
+
+mkdir Code
+
+cd ..
 
 
 echo "------------------------"
@@ -212,5 +220,3 @@ echo "rebooting in 1"
 sleep 1
 
 echo "goodbye"
-
-reboot
