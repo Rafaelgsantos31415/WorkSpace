@@ -118,26 +118,37 @@ echo "------------------------"
 echo "Creating vscode folders"
 echo "------------------------"
 
+cd /home/rafael
+
 mkdir .vscode
 
 cd .vscode
 
 mkdir extensions
 
-cd ..
+cd /home/rafael
 
 cd .config
 
 mkdir Code
 
-cd ..
+cd Code
+
+mkdir User
+
+cd /Home/rafael/WorkSpace
+
+
+chmod -R 777 /home/rafael/.vscode
+
+chmod -R 777 /home/rafael/.config/Code
 
 
 echo "------------------------"
 echo "Adding VSCode extensions..."
 echo "------------------------"
 
-mv Extensions.tar.gz/ /home/rafael/.vscode/extensions/
+mv Extensions.tar.gz /home/rafael/.vscode/extensions/
 
 cd /home/rafael/.vscode/extensions/
 
@@ -220,3 +231,4 @@ echo "rebooting in 1"
 sleep 1
 
 echo "goodbye"
+reboot
