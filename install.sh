@@ -99,12 +99,17 @@ echo "------------------------"
 
 snap install discord
 
-
 echo "------------------------"
 echo "installing VSCode..."
 echo "------------------------"
 
 snap install code --classic
+
+echo "------------------------"
+echo "installing Android Studio..."
+echo "------------------------"
+
+snap install android-studio --classic
 
 echo "------------------------"
 echo "installing Spotify..."
@@ -118,7 +123,7 @@ echo "------------------------"
 echo "Creating vscode folders"
 echo "------------------------"
 
-cd /home/rafael
+cd /home/$USER
 
 mkdir .vscode
 
@@ -126,7 +131,7 @@ cd .vscode
 
 mkdir extensions
 
-cd /home/rafael
+cd /home/$USER
 
 cd .config
 
@@ -136,39 +141,41 @@ cd Code
 
 mkdir User
 
-cd /home/rafael/WorkSpace
+cd /home/$USER/workspace
 
 
-chmod -R 777 /home/rafael/.vscode
+chmod -R 777 /home/$USER/.vscode
 
-chmod -R 777 /home/rafael/.config/Code
+chmod -R 777 /home/$USER/.config/Code
 
 
 echo "------------------------"
 echo "Adding VSCode extensions..."
 echo "------------------------"
 
-mv Extensions.tar.gz /home/rafael/.vscode/extensions/
+mv Extensions.tar.gz /home/$USER/.vscode/extensions/
 
-cd /home/rafael/.vscode/extensions/
+cd /home/$USER/.vscode/extensions/
 
 tar -zxvf Extensions.tar.gz
 
 rm Extensions.tar.gz
 
-cd /home/rafael/WorkSpace
+cd /home/$USER/workspace
 
 echo "------------------------"
 echo "config VSCode..."
 echo "------------------------"
 
-mv keybindings.json /home/rafael/.config/Code/User/
+mv keybindings.json /home/$USER/.config/Code/User/
 
-mv settings.json /home/rafael/.config/Code/User/
+mv settings.json /home/$USER/.config/Code/User/
 
 echo "------------------------"
 echo "installin Theme..."
 echo "------------------------"
+
+chmod -R 777 /usr/share/themes
 
 tar -zxvf Layan.tar.gz
 
@@ -179,6 +186,8 @@ mv Layan/ /usr/share/themes
 echo "------------------------"
 echo "installing icon..."
 echo "------------------------"
+
+chmod -R 777 /usr/share/icons
 
 tar -zxvf Tela.tar.gz
 
