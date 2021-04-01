@@ -123,26 +123,13 @@ echo "------------------------"
 echo "Creating vscode folders"
 echo "------------------------"
 
-cd /home/$USER
+mkdir /home/$USER/.vscode
 
-mkdir .vscode
+mkdir /home/$USER/.vscode/extensions
 
-cd .vscode
+mkdir /home/$USER/.config/Code
 
-mkdir extensions
-
-cd /home/$USER
-
-cd .config
-
-mkdir Code
-
-cd Code
-
-mkdir User
-
-cd /home/$USER/workspace
-
+mkdir /home/$USER/.config/Code/User
 
 chmod -R 777 /home/$USER/.vscode
 
@@ -167,33 +154,9 @@ echo "------------------------"
 echo "config VSCode..."
 echo "------------------------"
 
-mv keybindings.json /home/$USER/.config/Code/User/
+mv keybindings.json /home/$USER/.config/Code/User
 
-mv settings.json /home/$USER/.config/Code/User/
-
-echo "------------------------"
-echo "installin Theme..."
-echo "------------------------"
-
-chmod -R 777 /usr/share/themes
-
-tar -zxvf Layan.tar.gz
-
-rm Layan.tar.gz
-
-mv Layan/ /usr/share/themes
-
-echo "------------------------"
-echo "installing icon..."
-echo "------------------------"
-
-chmod -R 777 /usr/share/icons
-
-tar -zxvf Tela.tar.gz
-
-rm Tela.tar.gz
-
-mv Tela/ /usr/share/icons
+mv settings.json /home/$USER/.config/Code/User
 
 echo "------------------------"
 echo "Rebooting..."
