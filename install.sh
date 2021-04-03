@@ -1,152 +1,121 @@
- #!/bin/bash
+#!/bin/bash
 
-#update and upgrade
+#update
 
-echo "------------------------"
-echo "updating..."
-echo "------------------------"
+sudo apt update
 
-apt update
+sudo apt upgrade
 
-echo "------------------------"
-echo "upgrading..."
-echo "------------------------"
+#chrome
 
-apt upgrade
+sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-#apt install
+sudo apt install ./google-chrome-stable_current_amd64.deb
 
-echo "------------------------"
-echo "installing Chrome..."
-echo "------------------------"
+sudo rm google-chrome-stable_current_amd64.deb
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-apt install ./google-chrome-stable_current_amd64.deb
-
-rm google-chrome-stable_current_amd64.deb
-
-echo "------------------------"
 echo "installing Vim..."
-echo "------------------------"
 
-apt install vim
+sudo apt install vim
 
-echo "------------------------"
+
 echo "installing Curl..."
-echo "------------------------"
 
-apt install curl
+sudo apt install curl
 
-echo "------------------------"
+
 echo "installing Git..."
-echo "------------------------"
 
-apt install git
+sudo apt install git
 
-echo "------------------------"
+
 echo "installing Python3..."
-echo "------------------------"
 
-apt install python3
+sudo apt install python3
 
-echo "------------------------"
+
 echo "installing NodeJS..."
-echo "------------------------"
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-apt install -y nodejs
+sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install -y nodejs
 
-echo "------------------------"
+
 echo "installing Java..."
-echo "------------------------"
 
-apt install default-jre
+sudo apt install default-jre
 
-apt install default-jdk
+sudo apt install default-jdk
 
-echo "------------------------"
+
 echo "installing Insomnia..."
-echo "------------------------"
 
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list
     
-wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+sudo wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
     | sudo apt-key add -
 
-apt update
+sudo apt update
 
-apt install insomnia
+sudo apt install insomnia
 
-echo "------------------------"
+
 echo "installing Snapd..."
-echo "------------------------"
 
-apt install snapd
+sudo apt install snapd
 
-echo "------------------------"
+
 echo "installing Flatpak..."
-echo "------------------------"
 
-apt install flatpak
+sudo apt install flatpak
 
 #snap
 
-echo "------------------------"
 echo "installing Discord..."
-echo "------------------------"
 
-snap install discord
+sudo snap install discord
 
-echo "------------------------"
+
 echo "installing VSCode..."
-echo "------------------------"
 
-snap install code --classic
+sudo snap install code --classic
 
-echo "------------------------"
+
 echo "installing Android Studio..."
-echo "------------------------"
 
-snap install android-studio --classic
+sudo snap install android-studio --classic
 
-echo "------------------------"
+
 echo "installing Spotify..."
-echo "------------------------"
 
-snap install spotify
+sudo snap install spotify
+
+echo "installing VLC"
+
+sudo snap install vlc
 
 #config
 
-echo "------------------------"
-echo "Creating vscode folders"
-echo "------------------------"
+echo "opening vscode"
 
-mkdir /home/$USER/.vscode
+code
 
-mkdir /home/$USER/.vscode/extensions
+sleep 30
 
-mkdir /home/$USER/.config/Code
-
-mkdir /home/$USER/.config/Code/User
-
-chmod -R 777 /home/$USER/.vscode
-
-chmod -R 777 /home/$USER/.config/Code
-
+kill code
 
 echo "------------------------"
 echo "Adding VSCode extensions..."
 echo "------------------------"
 
-mv Extensions.tar.gz /home/$USER/.vscode/extensions/
+sudo mv Extensions.tar.gz /home/$USER/.vscode/extensions
 
-cd /home/$USER/.vscode/extensions/
+cd /home/$USER/.vscode/extensions
 
-tar -zxvf Extensions.tar.gz
+sudo tar -zxvf Extensions.tar.gz
 
-rm Extensions.tar.gz
+sudo rm Extensions.tar.gz
 
 cd /home/$USER/workspace
 
@@ -154,9 +123,9 @@ echo "------------------------"
 echo "config VSCode..."
 echo "------------------------"
 
-mv keybindings.json /home/$USER/.config/Code/User
+sudo mv keybindings.json /home/$USER/.config/Code/User
 
-mv settings.json /home/$USER/.config/Code/User
+sudo mv settings.json /home/$USER/.config/Code/User
 
 echo "------------------------"
 echo "Rebooting..."
