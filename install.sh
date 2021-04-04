@@ -6,7 +6,10 @@ sudo apt update
 
 sudo apt upgrade
 
-#chrome
+
+echo "\n----------------------------------------"
+echo "installing Chrome..."
+echo "----------------------------------------\n"
 
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
@@ -15,40 +18,54 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo rm google-chrome-stable_current_amd64.deb
 
 
+echo "\n----------------------------------------"
 echo "installing Vim..."
+echo "----------------------------------------\n"
 
 sudo apt install vim
 
 
+echo "\n----------------------------------------"
 echo "installing Curl..."
+echo "----------------------------------------\n"
 
 sudo apt install curl
 
 
+echo "\n----------------------------------------"
 echo "installing Git..."
+echo "----------------------------------------\n"
 
 sudo apt install git
 
 
+echo "\n----------------------------------------"
 echo "installing Python3..."
+echo "----------------------------------------\n"
 
 sudo apt install python3
 
 
+echo "\n----------------------------------------"
 echo "installing NodeJS..."
+echo "----------------------------------------\n"
 
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install -y nodejs
 
 
+echo "\n----------------------------------------"
 echo "installing Java..."
+echo "----------------------------------------\n"
 
 sudo apt install default-jre
 
 sudo apt install default-jdk
 
 
+echo "\n----------------------------------------"
 echo "installing Insomnia..."
+echo "----------------------------------------\n"
 
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list
@@ -61,53 +78,69 @@ sudo apt update
 sudo apt install insomnia
 
 
+echo "\n----------------------------------------"
 echo "installing Snapd..."
+echo "----------------------------------------\n"
 
 sudo apt install snapd
 
 
+echo "\n----------------------------------------"
 echo "installing Flatpak..."
+echo "----------------------------------------\n"
 
 sudo apt install flatpak
 
 #snap
 
+echo "\n----------------------------------------"
 echo "installing Discord..."
+echo "----------------------------------------\n"
 
 sudo snap install discord
 
 
+echo "\n----------------------------------------"
 echo "installing VSCode..."
+echo "----------------------------------------\n"
 
 sudo snap install code --classic
 
 
+echo "\n----------------------------------------"
 echo "installing Android Studio..."
+echo "----------------------------------------\n"
 
 sudo snap install android-studio --classic
 
 
+echo "\n----------------------------------------"
 echo "installing Spotify..."
+echo "----------------------------------------\n"
 
 sudo snap install spotify
 
+echo "\n----------------------------------------"
 echo "installing VLC"
+echo "----------------------------------------\n"
 
 sudo snap install vlc
 
 #config
 
+echo "\n----------------------------------------"
 echo "opening vscode"
+echo "----------------------------------------\n"
 
 code
 
 sleep 30
 
-kill code
+pkill code
 
-echo "------------------------"
+echo "\n----------------------------------------"
 echo "Adding VSCode extensions..."
-echo "------------------------"
+echo "----------------------------------------\n"
 
 sudo mv Extensions.tar.gz /home/$USER/.vscode/extensions
 
@@ -119,17 +152,17 @@ sudo rm Extensions.tar.gz
 
 cd /home/$USER/workspace
 
-echo "------------------------"
+echo "\n----------------------------------------"
 echo "config VSCode..."
-echo "------------------------"
+echo "----------------------------------------\n"
 
 sudo mv keybindings.json /home/$USER/.config/Code/User
 
 sudo mv settings.json /home/$USER/.config/Code/User
 
-echo "------------------------"
+echo "\n----------------------------------------"
 echo "Rebooting..."
-echo "------------------------"
+echo "----------------------------------------\n"
 
 echo "rebooting in 10"
 sleep 1
