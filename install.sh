@@ -1,15 +1,8 @@
 #!/bin/bash
 
-#update
-
-sudo apt update
-
-sudo apt upgrade
-
-
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Chrome..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
@@ -18,151 +11,112 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo rm google-chrome-stable_current_amd64.deb
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Vim..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install vim
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Curl..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install curl
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Git..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install git
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Python3..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install python3
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing NodeJS..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install -y nodejs
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Java..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install default-jre
 
 sudo apt install default-jdk
 
-
-echo "\n----------------------------------------"
-echo "installing Insomnia..."
-echo "----------------------------------------\n"
-
-echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
-    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
-    
-sudo wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
-    | sudo apt-key add -
-
-sudo apt update
-
-sudo apt install insomnia
-
-
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Snapd..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install snapd
 
-
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Flatpak..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo apt install flatpak
 
 #snap
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Discord..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo snap install discord
 
+echo "----------------------------------------"
+echo "installing Insomnia..."
+echo "----------------------------------------"
 
-echo "\n----------------------------------------"
+sudo snap install insomnia
+
+echo "----------------------------------------"
 echo "installing VSCode..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo snap install code --classic
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Android Studio..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo snap install android-studio --classic
 
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing Spotify..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo snap install spotify
 
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "installing VLC"
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 sudo snap install vlc
 
-#config
+echo "----------------------------------------"
+echo "installing VLC"
+echo "----------------------------------------"
 
-echo "\n----------------------------------------"
-echo "opening vscode"
-echo "----------------------------------------\n"
+sudo snap install docker
 
-code
 
-sleep 30
-
-pkill code
-
-echo "\n----------------------------------------"
-echo "Adding VSCode extensions..."
-echo "----------------------------------------\n"
-
-sudo mv Extensions.tar.gz /home/$USER/.vscode/extensions
-
-cd /home/$USER/.vscode/extensions
-
-sudo tar -zxvf Extensions.tar.gz
-
-sudo rm Extensions.tar.gz
-
-cd /home/$USER/workspace
-
-echo "\n----------------------------------------"
-echo "config VSCode..."
-echo "----------------------------------------\n"
-
-sudo mv keybindings.json /home/$USER/.config/Code/User
-
-sudo mv settings.json /home/$USER/.config/Code/User
-
-echo "\n----------------------------------------"
+echo "----------------------------------------"
 echo "Rebooting..."
-echo "----------------------------------------\n"
+echo "----------------------------------------"
 
 echo "rebooting in 10"
 sleep 1
