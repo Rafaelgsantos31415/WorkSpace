@@ -19,5 +19,5 @@ install using snap: <br>
 -visual studio code <br>
 -android estudio <br>
 -spotify <br>
--vlc <br> <br>
+-vlc <br>
 -docker
