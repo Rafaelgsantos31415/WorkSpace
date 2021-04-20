@@ -1,71 +1,73 @@
 #!/bin/bash
 
 echo "----------------------------------------"
+echo "Updating and Upgrading..."
+echo "----------------------------------------"
+
+apt update
+
+apt upgrade
+
+echo "----------------------------------------"
 echo "installing Chrome..."
 echo "----------------------------------------"
 
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-sudo apt install ./google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb
 
-sudo rm google-chrome-stable_current_amd64.deb
-
+rm google-chrome-stable_current_amd64.deb
 
 echo "----------------------------------------"
 echo "installing Vim..."
 echo "----------------------------------------"
 
-sudo apt install vim
-
+apt install vim
 
 echo "----------------------------------------"
 echo "installing Curl..."
 echo "----------------------------------------"
 
-sudo apt install curl
-
+apt install curl
 
 echo "----------------------------------------"
 echo "installing Git..."
 echo "----------------------------------------"
 
-sudo apt install git
-
+apt install git
 
 echo "----------------------------------------"
 echo "installing Python3..."
 echo "----------------------------------------"
 
-sudo apt install python3
-
+apt install python3
 
 echo "----------------------------------------"
 echo "installing NodeJS..."
 echo "----------------------------------------"
 
-sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install -y nodejs
-
+curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
+apt install -y nodejs
 
 echo "----------------------------------------"
 echo "installing Java..."
 echo "----------------------------------------"
 
-sudo apt install default-jre
+apt install default-jre
 
-sudo apt install default-jdk
+apt install default-jdk
 
 echo "----------------------------------------"
 echo "installing Snapd..."
 echo "----------------------------------------"
 
-sudo apt install snapd
+apt install snapd
 
 echo "----------------------------------------"
 echo "installing Flatpak..."
 echo "----------------------------------------"
 
-sudo apt install flatpak
+apt install flatpak
 
 #snap
 
@@ -73,46 +75,45 @@ echo "----------------------------------------"
 echo "installing Discord..."
 echo "----------------------------------------"
 
-sudo snap install discord
+snap install discord
 
 echo "----------------------------------------"
 echo "installing Insomnia..."
 echo "----------------------------------------"
 
-sudo snap install insomnia
+snap install insomnia
 
 echo "----------------------------------------"
 echo "installing VSCode..."
 echo "----------------------------------------"
 
-sudo snap install code --classic
+snap install code --classic
 
 
 echo "----------------------------------------"
 echo "installing Android Studio..."
 echo "----------------------------------------"
 
-sudo snap install android-studio --classic
+snap install android-studio --classic
 
 
 echo "----------------------------------------"
 echo "installing Spotify..."
 echo "----------------------------------------"
 
-sudo snap install spotify
+snap install spotify
 
 echo "----------------------------------------"
 echo "installing VLC"
 echo "----------------------------------------"
 
-sudo snap install vlc
+snap install vlc
 
 echo "----------------------------------------"
 echo "installing VLC"
 echo "----------------------------------------"
 
-sudo snap install docker
-
+snap install docker
 
 echo "----------------------------------------"
 echo "Rebooting..."
