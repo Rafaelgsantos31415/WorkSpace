@@ -110,7 +110,7 @@ echo "----------------------------------------"
 snap install vlc
 
 echo "----------------------------------------"
-echo "installing DOCKER"
+echo "installing Docker"
 echo "----------------------------------------"
 
 snap install docker
