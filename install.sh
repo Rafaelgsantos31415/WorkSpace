@@ -6,9 +6,9 @@ echo "----------------------------------------"
 
 apt update
 
-pkcon update
-
 apt upgrade
+
+pkcon update
 
 echo "----------------------------------------"
 echo "installing Chrome..."
@@ -19,6 +19,28 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install ./google-chrome-stable_current_amd64.deb
 
 rm google-chrome-stable_current_amd64.deb
+
+echo "----------------------------------------"
+echo "installing ZSH..."
+echo "----------------------------------------"
+
+apt install zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
+cd ..
+
+rm .zshrc
+
+cd Workspace
+
+mv .zshrc /home/rafael
 
 echo "----------------------------------------"
 echo "installing Vim..."
@@ -50,6 +72,24 @@ echo "----------------------------------------"
 
 curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
 apt install -y nodejs
+
+echo "----------------------------------------"
+echo "installing Swift..."
+echo "----------------------------------------"
+
+apt install clang libicu-dev libpython2.7-dev libtinfo5 libncurses5 libpython2.7 libz3-dev
+
+cd /tmp
+
+wget -c https://swift.org/builds/swift-5.3.3-release/ubuntu2004/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu20.04.tar.gz
+
+tar xzf swift-5.3.3-RELEASE-ubuntu20.04.tar.gz
+
+mv swift-5.3.3-RELEASE-ubuntu20.04 /usr/share/swift
+
+echo "export PATH=/usr/share/swift/usr/bin:$PATH" >> ~/.zshrc
+
+source ~/.zshrc
 
 echo "----------------------------------------"
 echo "installing Java..."
@@ -116,6 +156,14 @@ echo "installing Docker"
 echo "----------------------------------------"
 
 snap install docker
+
+#flatpak
+
+echo "----------------------------------------"
+echo "installing Dropbox"
+echo "----------------------------------------"
+
+flatpak install flathub com.dropbox.Client
 
 echo "----------------------------------------"
 echo "Rebooting..."
