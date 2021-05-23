@@ -16,7 +16,7 @@ echo "----------------------------------------"
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-apt install ./google-chrome-stable_current_amd64.deb
+apt install -y ./google-chrome-stable_current_amd64.deb
 
 rm google-chrome-stable_current_amd64.deb
 
@@ -24,25 +24,25 @@ echo "----------------------------------------"
 echo "installing Vim..."
 echo "----------------------------------------"
 
-apt install vim
+apt install -y vim
 
 echo "----------------------------------------"
 echo "installing Curl..."
 echo "----------------------------------------"
 
-apt install curl
+apt install -y curl
 
 echo "----------------------------------------"
 echo "installing Git..."
 echo "----------------------------------------"
 
-apt install git
+apt install -y git
 
 echo "----------------------------------------"
 echo "installing Python3..."
 echo "----------------------------------------"
 
-apt install python3
+apt install -y python3
 
 echo "----------------------------------------"
 echo "installing NodeJS..."
@@ -55,27 +55,27 @@ echo "----------------------------------------"
 echo "installing ZSH..."
 echo "________________________________________"
 
-apt install zsh
+apt install -y zsh
 
 echo "----------------------------------------"
 echo "installing Java..."
 echo "----------------------------------------"
 
-apt install default-jre
+apt install -y default-jre
 
-apt install default-jdk
+apt install -y default-jdk
 
 echo "----------------------------------------"
 echo "installing Snapd..."
 echo "----------------------------------------"
 
-apt install snapd
+apt install -y snapd
 
 echo "----------------------------------------"
 echo "installing Flatpak..."
 echo "----------------------------------------"
 
-apt install flatpak
+apt install -y flatpak
 
 #snap
 
