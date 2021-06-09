@@ -21,18 +21,6 @@ apt install -y ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 echo "----------------------------------------"
-echo "installing Vim..."
-echo "----------------------------------------"
-
-apt install -y vim
-
-echo "----------------------------------------"
-echo "installing Curl..."
-echo "----------------------------------------"
-
-apt install -y curl
-
-echo "----------------------------------------"
 echo "installing Git..."
 echo "----------------------------------------"
 
@@ -45,25 +33,10 @@ echo "----------------------------------------"
 apt install -y python3
 
 echo "----------------------------------------"
-echo "installing NodeJS..."
-echo "----------------------------------------"
-
-curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
-apt install -y nodejs
-
-echo "----------------------------------------"
 echo "installing ZSH..."
 echo "________________________________________"
 
 apt install -y zsh
-
-echo "----------------------------------------"
-echo "installing Java..."
-echo "----------------------------------------"
-
-apt install -y default-jre
-
-apt install -y default-jdk
 
 echo "----------------------------------------"
 echo "installing Snapd..."
@@ -78,6 +51,32 @@ echo "----------------------------------------"
 apt install -y flatpak
 
 #snap
+
+echo "----------------------------------------"
+echo "installing Java..."
+echo "----------------------------------------"
+
+snap install openjdk
+
+snap install java-jre-ondra --edge
+
+echo "----------------------------------------"
+echo "installing Node..."
+echo "----------------------------------------"
+
+snap install node --classic
+
+echo "----------------------------------------"
+echo "installing Curl..."
+echo "----------------------------------------"
+
+snap install curl
+
+echo "----------------------------------------"
+echo "installing Vim..."
+echo "----------------------------------------"
+
+snap install vim-editor --beta
 
 echo "----------------------------------------"
 echo "installing Discord..."
@@ -124,38 +123,7 @@ echo "----------------------------------------"
 snap install docker
 
 echo "----------------------------------------"
-echo "Rebooting..."
+echo "installing Oh My ZSH"
 echo "----------------------------------------"
 
-echo "rebooting in 10"
-sleep 1
-
-echo "rebooting in 9"
-sleep 1
-
-echo "rebooting in 8"
-sleep 1
-
-echo "rebooting in 7"
-sleep 1
-
-echo "rebooting in 6"
-sleep 1
-
-echo "rebooting in 5"
-sleep 1
-
-echo "rebooting in 4"
-sleep 1
-
-echo "rebooting in 3"
-sleep 1
-
-echo "rebooting in 2"
-sleep 1
-
-echo "rebooting in 1"
-sleep 1
-
-echo "goodbye"
-reboot
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
